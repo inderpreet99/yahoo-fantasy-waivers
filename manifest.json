@@ -1,0 +1,28 @@
+{
+  "name": "Yahoo Fantasy Waivers",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Turns waivers page into a drag drop widget. No need to manually set the waiver dropdown select boxes.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://football.fantasysports.yahoo.com/*/editwaivers"
+      ],
+      "js": [
+        "contentscript.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "script.js" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
+}
